@@ -1,0 +1,39 @@
+﻿<Application x:Class="Player.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Player"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ImageSource x:Key="player_fastforward">Assets/player_fastforward.png</ImageSource>
+            <ImageSource x:Key="player_pause">Assets/player_pause.png</ImageSource>
+            <ImageSource x:Key="player_play">Assets/player_play.png</ImageSource>
+            <ImageSource x:Key="player_record">Assets/player_record.png</ImageSource>
+            <ImageSource x:Key="player_rewind">Assets/player_rewind.png</ImageSource>
+            <ImageSource x:Key="player_stop">Assets/player_stop.png</ImageSource>
+            <ImageSource x:Key="folder_add">Assets/folder-Add.png</ImageSource>
+            <ImageSource x:Key="close">Assets/close.png</ImageSource>
+
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="1"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <Image Name="Normal" Source="{TemplateBinding Property=Tag}"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="ButtonBase.IsPressed" Value="True">
+                                    <Setter Property="Opacity" Value="0.5"/>
+                                </Trigger>
+                                <!--<Trigger Property="UIElement.IsMouseOver" Value="True">
+                                    <Setter Property="Opacity" Value="0.8"/>
+                                </Trigger>-->
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
