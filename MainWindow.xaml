@@ -139,7 +139,7 @@
                 <Button Grid.Column="3" Tag="{StaticResource player_stop}" Height="30" Width="30"/>
             </Grid>
         </StackPanel>
-        <ListView VerticalAlignment="Bottom" Margin="5" Foreground="LightSteelBlue" ItemsSource="{Binding Musics}" Height="5">
+        <ListView x:Name="listView" VerticalAlignment="Bottom" Margin="5" Foreground="LightSteelBlue" ItemsSource="{Binding Musics}" Height="50">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

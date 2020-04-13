@@ -151,6 +151,7 @@ namespace Player
         private void ExecuteTick()
         {
             bool execute_again = true;
+            //if (this.music_current == null || this.chronometer.Elapsed.Seconds >= 10)
             if (this.music_current == null || this.chronometer.Elapsed.Seconds >= 10)
             {
                 if (index > (this.Musics.Count - 1))
@@ -164,6 +165,9 @@ namespace Player
                     this.chronometer.Restart();
                     this.music_current.IsPlay = true;
                     index++;
+
+                    this.listView.ScrollIntoView(this.music_current);
+                    this.listView.SelectedItem = this.music_current;
                 }
             }
             if (execute_again)
