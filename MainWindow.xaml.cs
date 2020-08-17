@@ -152,7 +152,7 @@ namespace Player
         {
             bool execute_again = true;
             //if (this.music_current == null || this.chronometer.Elapsed.Seconds >= 10)
-            if (this.music_current == null || this.chronometer.Elapsed.Seconds >= 10)
+            if (this.music_current == null || this.chronometer.Elapsed.Minutes >= 10)
             {
                 if (index > (this.Musics.Count - 1))
                 {
